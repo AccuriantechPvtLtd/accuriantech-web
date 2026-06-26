@@ -1,0 +1,21 @@
+{
+  "name": "Accuriantech",
+  "short_name": "Accuriantech",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#efefef",
+  "theme_color": "#1f5fcc",
+  "icons": [
+    {
+      "src": "/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

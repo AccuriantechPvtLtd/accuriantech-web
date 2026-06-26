@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://accuriantech.com/</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://accuriantech.com/services</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://accuriantech.com/about</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://accuriantech.com/contact</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://accuriantech.com/careers</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <url><loc>https://accuriantech.com/services/ai-solutions</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://accuriantech.com/services/software-development</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://accuriantech.com/services/salesforce</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://accuriantech.com/services/powerbi</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://accuriantech.com/services/cloud</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://accuriantech.com/services/managed-it</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://accuriantech.com/services/network-security</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://accuriantech.com/services/servicenow</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://accuriantech.com/services/sap</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <url><loc>https://accuriantech.com/industries/technology</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://accuriantech.com/industries/finance</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://accuriantech.com/industries/healthcare</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://accuriantech.com/industries/education</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://accuriantech.com/industries/enterprise</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://accuriantech.com/industries/government</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <url><loc>https://accuriantech.com/privacy-policy</loc><lastmod>2026-05-29</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://accuriantech.com/terms-of-service</loc><lastmod>2026-05-29</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>

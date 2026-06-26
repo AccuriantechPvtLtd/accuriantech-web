@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Force canonical host + HTTPS
+  RewriteCond %{HTTPS} !=on [OR]
+  RewriteCond %{HTTP_HOST} ^www\.accuriantech\.com$ [NC]
+  RewriteRule ^ https://accuriantech.com%{REQUEST_URI} [L,R=301]
+
+  # Preserve real files/directories (assets, images, css, js, etc.)
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # SPA fallback for all client routes
+  RewriteRule ^ index.html [L]
+</IfModule>

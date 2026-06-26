@@ -1,0 +1,7 @@
+# Canonical host redirects
+https://www.accuriantech.com/* https://accuriantech.com/:splat 301!
+http://www.accuriantech.com/* https://accuriantech.com/:splat 301!
+http://accuriantech.com/* https://accuriantech.com/:splat 301!
+
+# SPA fallback
+/* /index.html 200

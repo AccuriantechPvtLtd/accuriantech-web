@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 25% 97% / 0.84;
+    --foreground: 222 24% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 24% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 24% 13%;
+
+    --primary: 221 58% 31%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 30% 94% / 0.86;
+    --secondary-foreground: 222 24% 13%;
+
+    --muted: 220 25% 94% / 0.82;
+    --muted-foreground: 220 12% 40%;
+
+    --accent: 218 79% 46%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 86%;
+    --input: 220 20% 86%;
+    --ring: 218 79% 46%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 220 25% 12%;
+    --sidebar-foreground: 216 20% 92%;
+    --sidebar-primary: 218 79% 46%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 25% 18%;
+    --sidebar-accent-foreground: 216 20% 92%;
+    --sidebar-border: 220 25% 26%;
+    --sidebar-ring: 218 79% 46%;
+
+    /* Custom tokens */
+    --navy: 221 58% 31%;
+    --navy-light: 220 46% 44%;
+    --cyan: 218 79% 46%;
+    --cyan-glow: 211 100% 58%;
+    --coral: 218 79% 46%;
+    --coral-glow: 211 100% 58%;
+    --teal-soft: 220 26% 95%;
+    --gradient-primary: linear-gradient(135deg, hsl(218 79% 46%), hsl(203 100% 50%));
+    --gradient-hero: linear-gradient(135deg, hsl(221 56% 34%), hsl(211 74% 47%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 30% 96%));
+    --shadow-card: 0 12px 26px -18px hsl(221 70% 40% / 0.2);
+    --shadow-card-hover: 0 18px 38px -20px hsl(218 79% 46% / 0.28);
+    --shadow-glow: 0 0 22px hsl(218 79% 46% / 0.22);
+
+    /* ── Global section spacing tokens ──
+       Drives every section's vertical rhythm. Adjust here, not per-file. */
+    --section-spacing-large: 40px;
+    --section-spacing-medium: 32px;
+    --section-spacing-small: 24px;
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --section-spacing-large: 40px;
+      --section-spacing-medium: 40px;
+      --section-spacing-small: 32px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :root {
+      --section-spacing-large: 40px;
+      --section-spacing-medium: 40px;
+      --section-spacing-small: 32px;
+    }
+  }
+
+  .dark {
+    --background: 222 47% 6%;
+    --foreground: 216 20% 93%;
+    --card: 222 40% 10%;
+    --card-foreground: 216 20% 93%;
+    --popover: 222 40% 10%;
+    --popover-foreground: 216 20% 93%;
+    --primary: 217 85% 48%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 222 32% 16%;
+    --secondary-foreground: 216 20% 93%;
+    --muted: 222 26% 18%;
+    --muted-foreground: 216 10% 55%;
+    --accent: 217 91% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 222 26% 18%;
+    --input: 222 26% 18%;
+    --ring: 217 91% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  body {
+    @apply text-foreground font-body antialiased;
+    background: linear-gradient(135deg, hsl(220 36% 98%), hsl(212 60% 96%));
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card border border-border/80 rounded-xl;
+    box-shadow: var(--shadow-card);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  .glass-card:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-2px);
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  .section-padding {
+    padding-top: var(--section-spacing-medium);
+    padding-bottom: var(--section-spacing-medium);
+    @apply px-4 md:px-8;
+  }
+
+  .section-spacing-lg {
+    padding-top: var(--section-spacing-large);
+    padding-bottom: var(--section-spacing-large);
+    @apply px-4 md:px-8;
+  }
+
+  .section-spacing {
+    padding-top: var(--section-spacing-medium);
+    padding-bottom: var(--section-spacing-medium);
+    @apply px-4 md:px-8;
+  }
+
+  .section-spacing-sm {
+    padding-top: var(--section-spacing-small);
+    padding-bottom: var(--section-spacing-small);
+    @apply px-4 md:px-8;
+  }
+
+  .nav-glass {
+    @apply bg-white/85 backdrop-blur-xl border-b border-border/70;
+  }
+
+  .btn-primary-glow {
+    @apply bg-accent text-accent-foreground font-semibold px-8 py-3.5 rounded-xl;
+    box-shadow: var(--shadow-glow);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .btn-primary-glow:hover {
+    box-shadow: 0 0 34px hsl(218 79% 46% / 0.28);
+    transform: translateY(-2px);
+  }
+  .btn-primary-glow:active {
+    transform: translateY(0);
+  }
+
+  .stat-number {
+    @apply text-5xl md:text-6xl font-heading font-bold gradient-text;
+  }
+
+  /* Smooth page transitions */
+  .page-enter {
+    @apply animate-fade-in;
+  }
+}
+
+
+/* Ambient blob animations */
+@keyframes blob-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -20px) scale(1.05); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+@keyframes blob-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-25px, 15px) scale(0.95); }
+  66% { transform: translate(15px, -25px) scale(1.05); }
+}
+@keyframes blob-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(20px, 25px) scale(1.03); }
+  66% { transform: translate(-15px, -15px) scale(0.97); }
+}
+.animate-blob-1 { animation: blob-1 20s ease-in-out infinite; }
+.animate-blob-2 { animation: blob-2 25s ease-in-out infinite; }
+.animate-blob-3 { animation: blob-3 18s ease-in-out infinite; }

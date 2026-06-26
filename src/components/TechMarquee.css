@@ -1,0 +1,114 @@
+/* ═══════════════════════════════════════════
+   INFINITE RIBBON WALL
+   3 rows of technology badges
+   ═══════════════════════════════════════════ */
+
+.ribbon {
+  overflow: hidden;
+  width: 100%;
+}
+
+.ribbon__track {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: max-content;
+  will-change: transform;
+}
+
+/* ─── Badge ─── */
+.ribbon__badge {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(226, 232, 240, 0.7);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.ribbon__badge:hover {
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 0 8px 20px -4px rgba(37, 99, 235, 0.12);
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+.ribbon__badge-logo {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.ribbon__badge-name {
+  font-size: 12px;
+  font-weight: 500;
+  color: #334155;
+  white-space: nowrap;
+}
+
+/* ─── Animations ─── */
+.ribbon--ltr .ribbon__track {
+  animation: ribbon-ltr 40s linear infinite;
+}
+
+.ribbon--rtl .ribbon__track {
+  animation: ribbon-rtl 45s linear infinite;
+}
+
+.ribbon--ltr-slow .ribbon__track {
+  animation: ribbon-ltr 55s linear infinite;
+}
+
+/* Pause all on hover */
+.ribbon:hover .ribbon__track {
+  animation-play-state: paused;
+}
+
+@keyframes ribbon-ltr {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Move by 1/3 of track (since we have 3 copies) */
+    transform: translateX(-33.333%);
+  }
+}
+
+@keyframes ribbon-rtl {
+  0% {
+    transform: translateX(-33.333%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* ─── Responsive ─── */
+@media (min-width: 768px) {
+  .ribbon__track {
+    gap: 14px;
+  }
+
+  .ribbon__badge {
+    padding: 10px 16px;
+    height: 48px;
+    border-radius: 14px;
+    gap: 10px;
+  }
+
+  .ribbon__badge-logo {
+    width: 24px;
+    height: 24px;
+  }
+
+  .ribbon__badge-name {
+    font-size: 13px;
+  }
+}

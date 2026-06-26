@@ -1,0 +1,24 @@
+server {
+    listen 80;
+    server_name accuriantech.com www.accuriantech.com;
+    return 301 https://accuriantech.com$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name www.accuriantech.com;
+    return 301 https://accuriantech.com$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name accuriantech.com;
+
+    root /var/www/accuriantech/dist;
+    index index.html;
+
+    # Keep real files untouched; route everything else to SPA entry
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}

@@ -1,5 +1,5 @@
 import ServicePageLayout, { type ServicePageData } from "@/components/ServicePageLayout";
-import { Cpu, Shield, Workflow, Server, Monitor } from "lucide-react";
+import { Cpu, Shield, Workflow, Server, Monitor, Search, PenTool, Rocket, TestTube, TrendingUp } from "lucide-react";
 
 const data: ServicePageData = {
   title: "Managed IT Services",
@@ -128,6 +128,15 @@ const data: ServicePageData = {
       answer:
         "Most clients run on a fixed monthly retainer based on user count and service tier. We give you a transparent quote up-front — no per-ticket surprises and no per-incident hourly creep.",
     },
+  ],
+  deliveryTitle: "Onboarding Process",
+  deliverySubtitle: "How we transition your IT operations to our managed services team.",
+  deliverySteps: [
+    { icon: Search, title: "Environment Assessment", desc: "Document infrastructure, tools, SLAs, and current gaps." },
+    { icon: PenTool, title: "Service Design", desc: "Define support tiers, escalation paths, and monitoring scope." },
+    { icon: Rocket, title: "Knowledge Transfer", desc: "Shadow period with your team for full context." },
+    { icon: TestTube, title: "Parallel Run", desc: "Run alongside existing support to validate readiness." },
+    { icon: TrendingUp, title: "Full Operations", desc: "Complete handover with continuous reporting and SLA tracking." },
   ],
 };
 

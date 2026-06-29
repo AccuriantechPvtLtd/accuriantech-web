@@ -9,6 +9,19 @@ const data: ServicePageData = {
   heroImage: "/industries/healthcare.png",
   canonicalPath: "/industries/healthcare",
   seoKeywords: "healthcare IT solutions, HIPAA compliance, health tech consulting, medical data analytics",
+  hideDeliveryProcess: true,
+  businessOutcomes: {
+    title: "Business Outcomes We Enable",
+    subtitle: "Measurable impact for healthcare organizations through secure technology solutions.",
+    outcomes: [
+      { metric: "99.9%", label: "Data Compliance", description: "HIPAA-compliant systems ensuring patient data privacy and security." },
+      { metric: "40%", label: "Operational Efficiency", description: "Reduction in administrative workload through workflow automation." },
+      { metric: "50%", label: "Faster Patient Access", description: "Improved patient portal performance and digital care delivery." },
+      { metric: "30%", label: "Cost Savings", description: "Lower IT overhead through cloud-native healthcare infrastructure." },
+      { metric: "Real-time", label: "Clinical Analytics", description: "Instant visibility into patient outcomes and operational KPIs." },
+      { metric: "Zero", label: "Data Breaches", description: "Enterprise-grade security preventing unauthorized access to PHI." },
+    ],
+  },
   sections: [
     {
       icon: Shield,

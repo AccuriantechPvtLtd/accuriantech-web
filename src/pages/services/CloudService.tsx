@@ -1,5 +1,5 @@
 import ServicePageLayout, { type ServicePageData } from "@/components/ServicePageLayout";
-import { Globe, Shield, Server, BarChart3, Cpu } from "lucide-react";
+import { Globe, Shield, Server, BarChart3, Cpu, Search, PenTool, Rocket, TestTube, TrendingUp } from "lucide-react";
 
 const data: ServicePageData = {
   title: "Cloud Support (Azure/AWS)",
@@ -128,6 +128,15 @@ const data: ServicePageData = {
       answer:
         "Standard managed cloud support is 24/7 with 30-minute response on critical incidents. Lower tiers (8x5, 12x5) are also available, with monthly reporting on incidents, MTTR, and trends.",
     },
+  ],
+  deliveryTitle: "Cloud Delivery Process",
+  deliverySubtitle: "A structured approach to cloud migration, modernization, and optimization.",
+  deliverySteps: [
+    { icon: Search, title: "Assessment & Planning", desc: "Evaluate workloads, dependencies, and migration readiness." },
+    { icon: PenTool, title: "Architecture Design", desc: "Design landing zones, networking, security, and governance." },
+    { icon: Rocket, title: "Migration & Build", desc: "Execute migration with minimal downtime and zero data loss." },
+    { icon: TestTube, title: "Validation & Security", desc: "Performance testing, security hardening, and compliance checks." },
+    { icon: TrendingUp, title: "Optimize & Scale", desc: "Continuous FinOps optimization and auto-scaling." },
   ],
 };
 

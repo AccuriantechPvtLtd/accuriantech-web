@@ -1,5 +1,5 @@
 import ServicePageLayout, { type ServicePageData } from "@/components/ServicePageLayout";
-import { Shield, Monitor, Lock, Wifi, AlertTriangle } from "lucide-react";
+import { Shield, Monitor, Lock, Wifi, AlertTriangle, Search, PenTool, Rocket, TestTube, TrendingUp } from "lucide-react";
 
 const data: ServicePageData = {
   title: "Network & Security",
@@ -128,6 +128,15 @@ const data: ServicePageData = {
       answer:
         "Yes. We run quarterly phishing simulations, role-based training modules, and provide reporting that highlights at-risk groups so you can target follow-up coaching effectively.",
     },
+  ],
+  deliveryTitle: "Security Delivery Process",
+  deliverySubtitle: "A risk-based approach from assessment to continuous protection.",
+  deliverySteps: [
+    { icon: Search, title: "Security Assessment", desc: "Vulnerability scanning, penetration testing, and risk analysis." },
+    { icon: PenTool, title: "Architecture & Policy", desc: "Design zero-trust architecture and security policies." },
+    { icon: Rocket, title: "Implementation", desc: "Deploy firewalls, SIEM, EDR, and access controls." },
+    { icon: TestTube, title: "Testing & Hardening", desc: "Red team exercises and compliance validation." },
+    { icon: TrendingUp, title: "Monitor & Respond", desc: "24/7 SOC monitoring with incident response." },
   ],
 };
 

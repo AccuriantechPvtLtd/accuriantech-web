@@ -118,17 +118,19 @@ const Services = () => {
         <Navbar />
 
         {/* ═══ Hero ═══ */}
-        <section className="relative overflow-hidden pt-28 pb-24" style={{ background: "var(--gradient-hero)" }}>
-          <div className="absolute inset-0 opacity-[0.03]" style={{
-            backgroundImage: `linear-gradient(hsl(var(--accent)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--accent)) 1px, transparent 1px)`,
-            backgroundSize: "80px 80px",
+        <section className="relative overflow-hidden pt-28 pb-24">
+          <img src="/services-hero.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-[#0F172A]/50" />
+          <div className="absolute inset-0 opacity-[0.05]" style={{
+            backgroundImage: `linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)`,
+            backgroundSize: "60px 60px",
           }} />
           <div className="container mx-auto px-4 md:px-8 relative">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
-              className="text-center max-w-3xl mx-auto"
+              className="text-left max-w-3xl"
             >
               <span className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 rounded-full px-5 py-2 mb-8 text-accent text-sm font-semibold tracking-wide">
                 Enterprise IT Solutions
@@ -140,7 +142,7 @@ const Services = () => {
                   Digital Transformation
                 </span>
               </h1>
-              <p className="text-primary-foreground/60 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+              <p className="text-primary-foreground/60 text-lg md:text-xl leading-relaxed max-w-2xl">
                 Four integrated practice areas delivering end-to-end technology consulting for global enterprises.
               </p>
             </motion.div>

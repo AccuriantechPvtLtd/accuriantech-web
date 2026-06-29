@@ -1,5 +1,5 @@
 import ServicePageLayout, { type ServicePageData } from "@/components/ServicePageLayout";
-import { Brain, Bot, LineChart, MessageSquare, ShieldCheck } from "lucide-react";
+import { Brain, Bot, LineChart, MessageSquare, ShieldCheck, Search, PenTool, Rocket, TestTube, TrendingUp } from "lucide-react";
 
 const data: ServicePageData = {
   title: "AI Solutions",
@@ -128,6 +128,15 @@ const data: ServicePageData = {
       answer:
         "With the right guardrails, yes. We add grounding (RAG), evaluation, content filters, and human-in-the-loop where needed to control accuracy and tone before anything goes live to customers.",
     },
+  ],
+  deliveryTitle: "AI Delivery Process",
+  deliverySubtitle: "From ideation to production-ready AI systems with measurable business impact.",
+  deliverySteps: [
+    { icon: Search, title: "Use Case Discovery", desc: "Identify high-impact AI opportunities aligned to business goals." },
+    { icon: PenTool, title: "Data & Model Design", desc: "Prepare data pipelines and select the right AI/ML architecture." },
+    { icon: Rocket, title: "Prototype & Train", desc: "Build working prototypes with iterative model training and tuning." },
+    { icon: TestTube, title: "Validate & Evaluate", desc: "Rigorous testing for accuracy, bias, latency, and edge cases." },
+    { icon: TrendingUp, title: "Deploy & Monitor", desc: "Production deployment with continuous monitoring and retraining." },
   ],
 };
 

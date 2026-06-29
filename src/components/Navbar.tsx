@@ -13,7 +13,7 @@ const services = [
   { label: "Managed IT Services", path: "/services/managed-it", icon: Monitor },
   { label: "Network & Security", path: "/services/network-security", icon: Shield },
   { label: "ServiceNow Development", path: "/services/servicenow", icon: Server },
-  { label: "SAP Security & SAP BTP/Cloud", path: "/services/sap", icon: Database },
+  { label: "SAP Solutions", path: "/services/sap", icon: Database },
 ];
 
 const industries = [

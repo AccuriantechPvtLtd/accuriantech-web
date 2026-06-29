@@ -9,6 +9,19 @@ const data: ServicePageData = {
   heroImage: "/industries/enterprise.png",
   canonicalPath: "/industries/enterprise",
   seoKeywords: "enterprise IT solutions, digital transformation, ERP consulting, enterprise cloud migration",
+  hideDeliveryProcess: true,
+  businessOutcomes: {
+    title: "Business Outcomes We Enable",
+    subtitle: "Measurable impact for enterprises through end-to-end digital transformation.",
+    outcomes: [
+      { metric: "40%", label: "Faster Delivery", description: "Reduced time-to-market through agile development and DevOps practices." },
+      { metric: "60%", label: "Cost Optimization", description: "Lower infrastructure costs through cloud migration and FinOps." },
+      { metric: "99.9%", label: "Uptime SLA", description: "Enterprise-grade availability for mission-critical business applications." },
+      { metric: "3x", label: "Team Scalability", description: "Rapid team scaling through dedicated teams and staff augmentation." },
+      { metric: "50%", label: "Process Automation", description: "Reduction in manual operations through intelligent workflow automation." },
+      { metric: "360°", label: "Customer View", description: "Unified customer data across CRM, ERP, and analytics platforms." },
+    ],
+  },
   sections: [
     {
       icon: Cloud,

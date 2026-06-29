@@ -9,6 +9,19 @@ const data: ServicePageData = {
   heroImage: "/industries/government.png",
   canonicalPath: "/industries/government",
   seoKeywords: "government IT solutions, public sector technology, FedRAMP compliance, citizen services modernization",
+  hideDeliveryProcess: true,
+  businessOutcomes: {
+    title: "Business Outcomes We Enable",
+    subtitle: "Measurable impact for government agencies through secure digital transformation.",
+    outcomes: [
+      { metric: "FedRAMP", label: "Compliance Ready", description: "Cloud infrastructure meeting government security and compliance standards." },
+      { metric: "60%", label: "Faster Services", description: "Reduced citizen service delivery time through digital portals and automation." },
+      { metric: "45%", label: "Cost Reduction", description: "Lower operational costs through cloud adoption and process modernization." },
+      { metric: "100%", label: "Data Sovereignty", description: "Complete control over sensitive data with on-premise and sovereign cloud." },
+      { metric: "24/7", label: "System Availability", description: "Critical public services running with enterprise-grade uptime." },
+      { metric: "Zero Trust", label: "Security Model", description: "Modern security architecture protecting government data and systems." },
+    ],
+  },
   sections: [
     {
       icon: Shield,

@@ -9,6 +9,19 @@ const data: ServicePageData = {
   heroImage: "/industries/finance.png",
   canonicalPath: "/industries/finance",
   seoKeywords: "finance IT solutions, banking technology, financial compliance, fintech consulting",
+  hideDeliveryProcess: true,
+  businessOutcomes: {
+    title: "Business Outcomes We Enable",
+    subtitle: "Measurable impact for financial institutions through technology transformation.",
+    outcomes: [
+      { metric: "99.9%", label: "System Uptime", description: "Mission-critical platform availability for trading and banking operations." },
+      { metric: "60%", label: "Faster Compliance", description: "Reduction in manual compliance effort through automation and GRC tools." },
+      { metric: "45%", label: "Cost Reduction", description: "Lower operational costs through cloud migration and process automation." },
+      { metric: "3x", label: "Faster Reporting", description: "Accelerated financial reporting with real-time dashboards and analytics." },
+      { metric: "100%", label: "Audit Readiness", description: "Always audit-ready with automated trails and regulatory documentation." },
+      { metric: "24/7", label: "Threat Monitoring", description: "Continuous security monitoring protecting sensitive financial data." },
+    ],
+  },
   sections: [
     {
       icon: Shield,

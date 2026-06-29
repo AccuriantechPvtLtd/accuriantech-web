@@ -1,5 +1,5 @@
 import ServicePageLayout, { type ServicePageData } from "@/components/ServicePageLayout";
-import { Workflow, Layers, Link2, Settings, Globe } from "lucide-react";
+import { Workflow, Layers, Link2, Settings, Globe, Search, PenTool, Rocket, TestTube, TrendingUp } from "lucide-react";
 
 const data: ServicePageData = {
   title: "ServiceNow Development",
@@ -128,6 +128,15 @@ const data: ServicePageData = {
       answer:
         "Yes — including CSA, CAD, CIS for ITSM/ITOM/HRSD, and Application Developer credentials. Our senior architects also hold the Certified Technical Architect track.",
     },
+  ],
+  deliveryTitle: "ServiceNow Delivery Process",
+  deliverySubtitle: "Structured implementation from scoping to continuous service improvement.",
+  deliverySteps: [
+    { icon: Search, title: "Process Mapping", desc: "Document current ITSM processes and improvement goals." },
+    { icon: PenTool, title: "Platform Design", desc: "Configure workflows, SLAs, and integration architecture." },
+    { icon: Rocket, title: "Build & Integrate", desc: "Develop flows, portals, and connect to existing tools." },
+    { icon: TestTube, title: "Test & Train", desc: "End-to-end testing with user training and documentation." },
+    { icon: TrendingUp, title: "Optimize & Evolve", desc: "Continuous improvement with CSI and new module rollouts." },
   ],
 };
 

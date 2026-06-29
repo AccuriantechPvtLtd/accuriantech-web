@@ -9,6 +9,19 @@ const data: ServicePageData = {
   heroImage: "/industries/technology.png",
   canonicalPath: "/industries/technology",
   seoKeywords: "IT solutions for tech companies, cloud infrastructure, DevOps consulting, technology consulting services",
+  hideDeliveryProcess: true,
+  businessOutcomes: {
+    title: "Business Outcomes We Enable",
+    subtitle: "Measurable impact for technology companies through scalable infrastructure and engineering.",
+    outcomes: [
+      { metric: "10x", label: "Deployment Speed", description: "Faster release cycles through CI/CD automation and DevOps." },
+      { metric: "99.99%", label: "Platform Uptime", description: "High-availability architecture for SaaS and product platforms." },
+      { metric: "50%", label: "Infra Cost Savings", description: "Optimized cloud spend through FinOps and right-sizing." },
+      { metric: "3x", label: "Engineering Output", description: "Increased velocity with dedicated teams and staff augmentation." },
+      { metric: "Zero", label: "Security Incidents", description: "Proactive security with DevSecOps and continuous monitoring." },
+      { metric: "Auto", label: "Scaling", description: "Infrastructure that scales automatically with demand peaks." },
+    ],
+  },
   sections: [
     {
       icon: Cloud,

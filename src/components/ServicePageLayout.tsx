@@ -43,6 +43,12 @@ export interface ServiceFAQ {
   answer: string;
 }
 
+export interface DeliveryStep {
+  icon: LucideIcon;
+  title: string;
+  desc: string;
+}
+
 export interface ServicePageData {
   title: string;
   /** Short label used for cross-linking ("Salesforce", "Power BI", …). */
@@ -60,6 +66,20 @@ export interface ServicePageData {
   problems?: string[];
   useCases?: string[];
   faqs?: ServiceFAQ[];
+  /** Custom delivery process steps. Falls back to default if not provided. */
+  deliverySteps?: DeliveryStep[];
+  /** Custom title for the delivery process section. Defaults to "Delivery Process". */
+  deliveryTitle?: string;
+  /** Custom subtitle for the delivery process section. */
+  deliverySubtitle?: string;
+  /** Hide the delivery process section entirely (useful for industry pages). */
+  hideDeliveryProcess?: boolean;
+  /** Business outcomes section (replaces delivery process on industry pages). */
+  businessOutcomes?: {
+    title?: string;
+    subtitle?: string;
+    outcomes: { metric: string; label: string; description: string }[];
+  };
 }
 
 interface Props {
@@ -434,16 +454,17 @@ const ServicePageLayout = ({ data }: Props) => {
         </section>
 
         {/* ─── Delivery Process ─── */}
+        {!data.hideDeliveryProcess && (
         <section id="process" className="section-padding bg-background scroll-mt-24">
           <div className="container mx-auto px-4 md:px-8">
             <motion.div {...fadeUp} transition={{ duration: 0.5 }} className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">Delivery Process</h2>
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">{data.deliveryTitle || "Delivery Process"}</h2>
               <p className="text-muted-foreground mt-2 max-w-xl mx-auto">
-                A proven methodology from discovery to continuous optimization.
+                {data.deliverySubtitle || "A proven methodology from discovery to continuous optimization."}
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
-              {deliverySteps.map((step, i) => (
+            <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-${(data.deliverySteps || deliverySteps).length <= 4 ? "4" : "5"} gap-6 max-w-6xl mx-auto`}>
+              {(data.deliverySteps || deliverySteps).map((step, i) => (
                 <motion.div
                   key={step.title}
                   {...fadeUp}
@@ -461,7 +482,7 @@ const ServicePageLayout = ({ data }: Props) => {
                   </span>
                   <h3 className="text-sm font-heading font-bold text-foreground mt-1 mb-1">{step.title}</h3>
                   <p className="text-xs text-muted-foreground leading-relaxed">{step.desc}</p>
-                  {i < deliverySteps.length - 1 && (
+                  {i < (data.deliverySteps || deliverySteps).length - 1 && (
                     <ArrowRight size={16} className="hidden lg:block absolute top-7 -right-3 text-muted-foreground/40" aria-hidden />
                   )}
                 </motion.div>
@@ -469,6 +490,42 @@ const ServicePageLayout = ({ data }: Props) => {
             </div>
           </div>
         </section>
+        )}
+
+        {/* ─── Business Outcomes (Industry pages) ─── */}
+        {data.businessOutcomes && (
+        <section className="section-padding bg-background scroll-mt-24">
+          <div className="container mx-auto px-4 md:px-8">
+            <motion.div {...fadeUp} transition={{ duration: 0.5 }} className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
+                {data.businessOutcomes.title || "Business Outcomes We Enable"}
+              </h2>
+              <p className="text-muted-foreground mt-2 max-w-xl mx-auto">
+                {data.businessOutcomes.subtitle || "Measurable impact through technology transformation."}
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+              {data.businessOutcomes.outcomes.map((outcome, i) => (
+                <motion.div
+                  key={outcome.label}
+                  {...fadeUp}
+                  transition={{ delay: i * 0.08, duration: 0.4 }}
+                  className="rounded-xl border border-[hsl(var(--border))] bg-[hsl(220_30%_97%)] p-6 text-center hover:shadow-[0_4px_20px_-8px_rgba(37,99,235,0.1)] hover:border-transparent transition-all duration-300"
+                >
+                  <span
+                    className="text-3xl md:text-4xl font-heading font-bold block mb-2"
+                    style={{ color: `hsl(${data.color})` }}
+                  >
+                    {outcome.metric}
+                  </span>
+                  <h3 className="text-sm font-heading font-bold text-foreground mb-1">{outcome.label}</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{outcome.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+        )}
 
         {/* ─── Related Services ─── */}
         {related.length > 0 && (

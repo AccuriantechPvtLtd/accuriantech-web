@@ -1,5 +1,5 @@
 import ServicePageLayout, { type ServicePageData } from "@/components/ServicePageLayout";
-import { Layers, Database, Lock, BarChart3, Settings } from "lucide-react";
+import { Layers, Database, Lock, BarChart3, Settings, Search, PenTool, Rocket, TestTube, TrendingUp } from "lucide-react";
 
 const data: ServicePageData = {
   title: "Power BI Consulting",
@@ -128,6 +128,15 @@ const data: ServicePageData = {
       answer:
         "Most projects range from a fixed-fee starter pack (3–5 dashboards, 4–6 weeks) to enterprise rollouts with COE setup and migration. We'll give you a transparent quote after a 30-min discovery call.",
     },
+  ],
+  deliveryTitle: "Analytics Delivery Process",
+  deliverySubtitle: "From raw data to actionable insights with governed, scalable dashboards.",
+  deliverySteps: [
+    { icon: Search, title: "Data Discovery", desc: "Identify data sources, KPIs, and reporting requirements." },
+    { icon: PenTool, title: "Data Modeling", desc: "Design star schemas, relationships, and DAX measures." },
+    { icon: Rocket, title: "Dashboard Development", desc: "Build interactive reports with drill-throughs and RLS." },
+    { icon: TestTube, title: "Review & Validate", desc: "Verify accuracy against source systems and business logic." },
+    { icon: TrendingUp, title: "Publish & Govern", desc: "Deploy to Power BI Service with governance and refresh schedules." },
   ],
 };
 

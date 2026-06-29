@@ -9,6 +9,19 @@ const data: ServicePageData = {
   heroImage: "/industries/education.png",
   canonicalPath: "/industries/education",
   seoKeywords: "education IT solutions, edtech consulting, LMS integration, student data management",
+  hideDeliveryProcess: true,
+  businessOutcomes: {
+    title: "Business Outcomes We Enable",
+    subtitle: "Measurable impact for educational institutions through modern technology.",
+    outcomes: [
+      { metric: "70%", label: "Digital Adoption", description: "Increased student and faculty adoption of digital learning platforms." },
+      { metric: "50%", label: "Admin Automation", description: "Reduction in manual administrative tasks through workflow digitization." },
+      { metric: "3x", label: "Faster Insights", description: "Accelerated student performance analytics for better decision-making." },
+      { metric: "99.9%", label: "Platform Uptime", description: "Reliable LMS and student portal availability during peak periods." },
+      { metric: "FERPA", label: "Full Compliance", description: "Complete student data privacy compliance with automated audit trails." },
+      { metric: "40%", label: "Cost Optimization", description: "Lower IT spend through cloud migration and shared service models." },
+    ],
+  },
   sections: [
     {
       icon: Cloud,

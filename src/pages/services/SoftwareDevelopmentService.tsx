@@ -1,5 +1,5 @@
 import ServicePageLayout, { type ServicePageData } from "@/components/ServicePageLayout";
-import { Code2, Layout, Smartphone, Plug, RefreshCw } from "lucide-react";
+import { Code2, Layout, Smartphone, Plug, RefreshCw, Search, PenTool, Rocket, TestTube, TrendingUp } from "lucide-react";
 
 const data: ServicePageData = {
   title: "Software Development",
@@ -128,6 +128,15 @@ const data: ServicePageData = {
       answer:
         "Yes — SLA-backed maintenance and enhancement retainers covering monitoring, bug fixes, security updates, and new feature development.",
     },
+  ],
+  deliveryTitle: "Development Lifecycle",
+  deliverySubtitle: "Agile engineering from concept to production-ready software.",
+  deliverySteps: [
+    { icon: Search, title: "Discovery & Scoping", desc: "Define requirements, user stories, and technical constraints." },
+    { icon: PenTool, title: "System Design", desc: "Architecture, API design, tech stack, and CI/CD setup." },
+    { icon: Rocket, title: "Sprint Development", desc: "Iterative delivery with bi-weekly demos and feedback." },
+    { icon: TestTube, title: "QA & Security", desc: "Automated testing, code review, and vulnerability scanning." },
+    { icon: TrendingUp, title: "Deploy & Iterate", desc: "Production release with monitoring and feature iteration." },
   ],
 };
 

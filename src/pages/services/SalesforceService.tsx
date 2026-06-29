@@ -1,5 +1,5 @@
 import ServicePageLayout, { type ServicePageData } from "@/components/ServicePageLayout";
-import { Brain, ShoppingCart, Users, Workflow, Globe } from "lucide-react";
+import { Brain, ShoppingCart, Users, Workflow, Globe, Search, PenTool, Rocket, TestTube, TrendingUp } from "lucide-react";
 
 const data: ServicePageData = {
   title: "Salesforce Development",
@@ -128,6 +128,15 @@ const data: ServicePageData = {
       answer:
         "Every consultant on a Salesforce engagement holds at least one Salesforce certification, with senior architects holding 5+. Certifications cover Admin, Platform Developer I/II, App Builder, and the relevant cloud (Sales, Service, Commerce, Health).",
     },
+  ],
+  deliveryTitle: "Salesforce Delivery Process",
+  deliverySubtitle: "From requirements to a fully configured, adopted Salesforce environment.",
+  deliverySteps: [
+    { icon: Search, title: "Requirements & Org Audit", desc: "Analyze current setup, business processes, and pain points." },
+    { icon: PenTool, title: "Solution Design", desc: "Map requirements to Salesforce features, integrations, and architecture." },
+    { icon: Rocket, title: "Configure & Develop", desc: "Build with declarative tools and custom Apex/LWC where needed." },
+    { icon: TestTube, title: "UAT & Data Migration", desc: "User acceptance testing and safe data migration." },
+    { icon: TrendingUp, title: "Go-Live & Adoption", desc: "Launch with training, hypercare, and change management." },
   ],
 };
 

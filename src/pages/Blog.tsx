@@ -60,7 +60,7 @@ const Blog = () => {
         </section>
 
         {/* Filters */}
-        <section className="py-8 border-b border-border/40 bg-white/50 backdrop-blur-sm sticky top-[72px] z-30">
+        <section className="py-8 border-b border-border/40 bg-white sticky top-[72px] z-30">
           <div className="container mx-auto px-4 md:px-8">
             <div className="flex flex-col lg:flex-row gap-4 items-start lg:items-center justify-between">
               {/* Search */}

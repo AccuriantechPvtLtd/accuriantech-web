@@ -85,17 +85,13 @@ const Navbar = () => {
   return (
     <>
       {/* ─── Floating dark navbar ─── */}
-      <div className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl">
+      <div className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl will-change-transform">
         <nav
-          className={`relative flex items-center justify-between h-14 md:h-16 px-4 md:px-6 rounded-2xl transition-all duration-500 ${
+          className={`relative flex items-center justify-between h-14 md:h-16 px-4 md:px-6 rounded-2xl transition-colors duration-300 ${
             scrolled
-              ? "bg-white/60 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] border border-white/40"
-              : "bg-white/40 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-white/30"
+              ? "bg-white/95 shadow-[0_8px_32px_rgba(0,0,0,0.08)] border border-gray-200/60"
+              : "bg-white/80 shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-white/40"
           }`}
-          style={{
-            WebkitBackdropFilter: scrolled ? "blur(24px) saturate(180%)" : "blur(16px) saturate(150%)",
-            backdropFilter: scrolled ? "blur(24px) saturate(180%)" : "blur(16px) saturate(150%)",
-          }}
         >
           {/* Left — Logo */}
           <Link to="/" className="flex items-center gap-2 shrink-0">
@@ -145,7 +141,7 @@ const Navbar = () => {
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 10, scale: 0.95 }}
                           transition={{ duration: 0.2, ease: [0.23, 1, 0.32, 1] }}
-                          className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-72 rounded-xl border border-border/50 bg-white/90 backdrop-blur-xl shadow-[0_20px_60px_rgba(0,0,0,0.12)] z-50 overflow-hidden"
+                          className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-72 rounded-xl border border-border/50 bg-white shadow-[0_20px_60px_rgba(0,0,0,0.12)] z-50 overflow-hidden"
                         >
                           <div className="p-2">
                             {services.map((s) => (
@@ -196,7 +192,7 @@ const Navbar = () => {
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 10, scale: 0.95 }}
                           transition={{ duration: 0.2, ease: [0.23, 1, 0.32, 1] }}
-                          className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-60 rounded-xl border border-border/50 bg-white/90 backdrop-blur-xl shadow-[0_20px_60px_rgba(0,0,0,0.12)] z-50 overflow-hidden"
+                          className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-60 rounded-xl border border-border/50 bg-white shadow-[0_20px_60px_rgba(0,0,0,0.12)] z-50 overflow-hidden"
                         >
                           <div className="p-2">
                             {industries.map((ind) => (
@@ -268,7 +264,7 @@ const Navbar = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
-              className="md:hidden mt-2 rounded-2xl bg-white/80 backdrop-blur-2xl border border-white/40 shadow-[0_8px_40px_rgba(0,0,0,0.1)] overflow-hidden"
+              className="md:hidden mt-2 rounded-2xl bg-white border border-gray-200/60 shadow-[0_8px_40px_rgba(0,0,0,0.1)] overflow-hidden"
             >
               <div className="px-4 py-4 flex flex-col gap-1">
                 {navItems.filter(i => !i.type).map((item) => (

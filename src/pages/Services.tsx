@@ -303,15 +303,11 @@ const Services = () => {
               className="relative rounded-3xl overflow-hidden p-12 md:p-20 text-center"
               style={{ background: "var(--gradient-hero)" }}
             >
-              <motion.div
+              <div
                 className="absolute top-0 right-0 w-80 h-80 rounded-full bg-accent/10 blur-[100px]"
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 6, repeat: Infinity }}
               />
-              <motion.div
+              <div
                 className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-cyan-500/8 blur-[80px]"
-                animate={{ scale: [1.1, 1, 1.1] }}
-                transition={{ duration: 8, repeat: Infinity }}
               />
 
               <div className="relative">

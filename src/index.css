@@ -123,6 +123,18 @@
     overflow-x: hidden;
   }
 
+  /* GPU-accelerate fixed/sticky elements to prevent scroll jank */
+  .fixed, [class*="sticky"] {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+
+  /* Reduce paint areas on large blur decorative elements */
+  [class*="blur-"] {
+    will-change: auto;
+    contain: strict;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
   }

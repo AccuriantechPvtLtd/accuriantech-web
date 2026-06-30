@@ -301,7 +301,7 @@ const TechnologyEcosystem = () => {
           }}
         />
         <div
-          className="absolute top-1/2 right-[6%] -translate-y-1/2 h-[34rem] w-[34rem] rounded-full blur-[150px]"
+          className="absolute top-1/2 right-[6%] -translate-y-1/2 h-[34rem] w-[34rem] rounded-full blur-[100px]"
           style={{ background: "hsl(215 85% 55% / 0.08)" }}
         />
       </div>

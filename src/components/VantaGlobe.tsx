@@ -55,8 +55,8 @@ const VantaGlobe = () => {
       effectRef.current = (VANTA as { default: (opts: Record<string, unknown>) => unknown }).default({
         el: vantaRef.current,
         THREE,
-        mouseControls: true,
-        touchControls: true,
+        mouseControls: false,
+        touchControls: false,
         gyroControls: false,
         minHeight: 200,
         minWidth: 200,
@@ -66,8 +66,8 @@ const VantaGlobe = () => {
         color2: 0x1e40af,
         backgroundColor: 0x0,
         backgroundAlpha: 0,
-        size: 1.2,
-        points: 8,
+        size: 1.0,
+        points: 6,
       });
     });
 
